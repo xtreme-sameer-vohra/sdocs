@@ -1,0 +1,27 @@
+**Drives, Volumes, Disks & Partitions**
+
+
+**Drive** 
+Physical storage device such as a hard disk, solid-state disk, removable USB flash drive etc. In Unix-like operating systems devices are represented by special file system objects called device nodes which are visible under the  `/dev directory`
+
+**Partions**
+A physical storage device can be divided into multiple logical storage units known as partitions. 
+
+**Volume**
+The term volume in Linux is related to the Logical Volume Manager (LVM), which can be used to manage mass storage devices. A physical volume is a storage device or partition. A logical volume created by the LVM is a logical storage device which can span multiple physical volumes.
+
+*Volume* implies formatting while a *partition* does not
+
+
+
+On Linux
+	/dev/sda1
+
+	`sd` SCSI device
+	`a`	 First drive detected by the OS
+	`1`	 First partition 
+
+
+
+**References**
+https://unix.stackexchange.com/questions/87300/differences-between-volume-partition-and-drive
