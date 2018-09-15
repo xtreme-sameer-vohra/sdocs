@@ -8,6 +8,15 @@
 #NAT Box 
 [netstat-nat](https://linux.die.net/man/1/netstat-nat)
 
+#Port Forwarding
+Local Port Forward
+ssh -f userName@gateway -L localMachinePort:remoteHost:remoteMachinePort -N
+  gateway is the middleman
+  remoteHost is the server accessible through gateway
+  localMachinePort is the port on your local machine from where the command is run
+  remoteMachinePort is the port on the remoteHost to connect to
 
 ##READING
 [TCP Keepalive](http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html)
+
+
