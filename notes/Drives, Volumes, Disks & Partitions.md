@@ -21,7 +21,19 @@ On Linux
 	`a`	 First drive detected by the OS
 	`1`	 First partition 
 
+**Mount**
+Mount provides the filesystem on some device to be accessible at some path on a unix system. It places the root of the filesytem of the device at the specified path
 
+`mount -t type device dir`
+
+here,
+
+* `type` is the device's type
+* `dir` is the path to make the files available at
+
+`findmnt` can be used to list all the mounts
 
 **References**
 https://unix.stackexchange.com/questions/87300/differences-between-volume-partition-and-drive
+
+http://man7.org/linux/man-pages/man8/mount.8.html
