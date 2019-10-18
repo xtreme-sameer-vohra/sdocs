@@ -12,8 +12,10 @@
 	`findmnt`	
 
 - Filter results
-	`awk '/search_pattern/ {print $1 $2}'
-		$1 refers to column 1, starting from index 0
+	`awk '/search_pattern/ {print $2 $1}'
+	
+	- `$1` refers to column 1 & `$2` refers to column 2, starting from index 0
+	
 ## Search
 - Find File
 	`find path_to_search -name "*.txt" `
