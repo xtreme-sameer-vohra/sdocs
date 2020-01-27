@@ -17,3 +17,13 @@
 
 - are we using PVCs for the workers ? so if a pod was re-created should it have lost the volumes at all ?
 	init scripts clean this up
+
+- What is the status quo for cow cow in Concourse ?
+	* cow-cow vol uses cow-merged or cow-upper as cow-cow lower ?
+
+- What is the difference between bind mount & overlay mount
+	* both allow creation of a file system at a path and provide it to applications at another path - can use it to make "another path" appear to be writeable even though it may not be at the underlying level ( before the overlay or bind mount was applied eg. /var on a ro-roofts)
+
+	* overlay is a VFS ( virtual file system implementation), bind mounts are implemented by VFS namespace facility
+	
+	* Reference - https://opensource.com/article/19/3/virtual-filesystems-linux
