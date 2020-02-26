@@ -1,6 +1,25 @@
-#Monitor Sockets
+#Debugging
+##Monitor Sockets
 [ss](http://man7.org/linux/man-pages/man8/ss.8.html)
-  eg. (Get all outbound TCP connections to a HOST:PORT combination)  `ss -it | grep SOME_PORT_NUMBER`
+
+- Get all outbound TCP connections to a HOST:PORT combination  `ss -it | grep SOME_PORT_NUMBER`
+
+##Monitor TCP Connections
+[netstat](http://man7.org/linux/man-pages/man8/netstat.8.html)
+
+- Get all TCP connections on a host `netstat -t`
+
+  * Observe the Send-Q and Recv-Q to see how many bytes are waiting to be read/written
+  * `-o` adds timer info and connection state
+
+- Get Summary, good starting point to see if there are dropped packets `netstat -s`
+
+
+##Monitor TCP Packets
+[tcpdump](http://man7.org/linux/man-pages/man1/tcpdump.1.html)
+
+- Monitor all packets on eth0 in verbose mode `tcpdump -vvi eth0`
+
 
 #Benchmarking HTTP requests
 [httpstat](https://github.com/davecheney/httpstat)
@@ -17,6 +36,8 @@ ssh -f userName@gateway -L localMachinePort:remoteHost:remoteMachinePort -N
   remoteMachinePort is the port on the remoteHost to connect to
 
 ##READING
-[TCP Keepalive](http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html)
+
+### [TCP Keepalive](http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html)
+-  Purpose of keepalive is; a) detect a peer who has disappeared abruptly b) prevent intermediate components from getting rid of a connection (eg. NAT idle timeout )
 
 
