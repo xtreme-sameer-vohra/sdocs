@@ -22,3 +22,6 @@
 - Dr Kindal Crenshaw on Intersectionality ( recommended by Ijeoma )
 - Online groups for people in that space
 - Race mediation workboooks ( recommended by Ijeoma )
+
+
+
