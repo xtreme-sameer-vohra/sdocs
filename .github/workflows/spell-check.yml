@@ -18,19 +18,11 @@ jobs:
       - name: Check spelling
         uses: check-spelling/check-spelling@0.0.16-alpha
         with:
-
+          # Container for spelling configuration
+          bucket:  ./
+          # Folder/Branch within bucket containing spelling configuration
+          project: ./
+          # Debug
+          debug: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-          - name: Check spelling
-  # You may pin to the exact commit or the version.
-  # uses: check-spelling/check-spelling@5f7f35b25e6bce7b1e5a8f226369a86ab19a623e
-  uses: check-spelling/check-spelling@0.0.16-alpha
-  with:
-    # Container for spelling configuration
-    bucket:  ./
-    # Folder/Branch within bucket containing spelling configuration
-    project: ./
-    # Debug
-    debug: true
